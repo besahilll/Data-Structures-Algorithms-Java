@@ -1,0 +1,21 @@
+//Max Subarray Sum by Kaden's Algorithm
+class kaden_algo{
+    public static void kadens(int arr[]){
+        int currSum=0;
+        int maxSum=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            currSum=Math.max(arr[i],currSum + arr[i]);
+            maxSum=Math.max(maxSum,currSum);
+         }
+        System.out.println("our max Subarray sum is:" +maxSum);
+    }
+
+    public static void main(String[] args){
+        int arr[]={-2,-3,-1,4};
+        kadens(arr);
+    }
+}
+
+
+
+
