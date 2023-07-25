@@ -1,0 +1,27 @@
+class Binary_Search{
+    public static int BinarySearch(int arr[], int key){
+        int start=0, end=arr.length;
+        while(start<=end){
+            int mid=(start+end)/2;
+            
+            //comparisions
+            if(arr[mid]==key){
+                return mid;
+            }
+            
+            if(arr[mid]>key){
+                end=mid-1;
+            }
+
+            if(arr[mid]<key){
+                start=mid+1;
+            }
+        }
+        return -1; //key element not found
+    }
+    public static void main(String args[]){
+        int arr[]={2,4,6,8,10,14,18,21,24};
+        int key=18;
+        System.out.println("Key element is at index " +BinarySearch(arr,key));
+    }
+}
