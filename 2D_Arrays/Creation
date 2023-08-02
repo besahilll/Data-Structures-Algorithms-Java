@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Creation {
+    public static boolean Search(int matrix[][], int key, int n, int m) { //searching the key element
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == key) {
+                    System.out.println("Key found at index (" + i + "," + j + ")");
+                    return true;
+                }
+            }
+        }
+        System.out.println("Key not found in the 2D array.");
+        return false;
+    }
+
+    public static void main(String args[]) {
+        int matrix[][] = new int[3][3];
+        int n = matrix.length, m = matrix[0].length;
+        int key = 5;
+
+        Scanner sc = new Scanner(System.in);
+        // Input
+        System.out.println("Enter the elements of the 2D array:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+
+        // Output
+        System.out.println("Printing the elements of the 2D array:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        Search(matrix, key, n, m);
+    }
+}
