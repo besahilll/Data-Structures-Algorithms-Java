@@ -14,3 +14,5 @@ class modular_exponentiation{
         System.out.println(modular(n,a,x));
     }
 }
+
+// Jai Maa Kali 
