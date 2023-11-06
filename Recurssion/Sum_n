@@ -1,0 +1,14 @@
+class Sum_n{
+    public static void main(String[] args){
+        int n=10;
+        sum(n);
+        System.out.println(sum(n));
+    }
+    public static int sum(int n){
+        if(n==1){   //base condition
+            return 1;
+        }
+        int sum=n+sum(n-1);
+        return sum;
+    }
+}
