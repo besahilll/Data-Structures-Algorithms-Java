@@ -18,4 +18,3 @@ class AssignCookies {
         int[] s={1,1};  //size of the cookie
         System.out.println(findContentChildren(g, s));
     }
-}
