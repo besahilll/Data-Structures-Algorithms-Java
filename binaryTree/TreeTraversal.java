@@ -41,6 +41,15 @@ class TreeTraversal{
         PreOrder(root.right);
     }
 
+    public static void PostOrder(Node root){
+        if(root==null){
+            return;
+        }
+        PostOrder(root.left);
+        PostOrder(root.right);
+        System.out.println(root.data);
+    }
+
     public static void main(String[] args){
         int[] nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree=new BinaryTree();
@@ -49,5 +58,6 @@ class TreeTraversal{
         PreOrder(root);
         System.out.println();
         InOrder(root);
+        PostOrder(root);
     }
 }
