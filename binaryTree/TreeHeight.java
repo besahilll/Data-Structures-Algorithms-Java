@@ -17,7 +17,7 @@ class TreeHieght{
                 return null;
             }
             Node newNode= new Node(nodes[idx]);
-            newNode.left=BuildTree(nodes);
+            newNode.left=BuildTree(nodes); 
             newNode.right=BuildTree(nodes);
 
             return newNode;
@@ -28,8 +28,8 @@ class TreeHieght{
         if(root==null){
             return 0;
         }
-        int leftSubtree=height(root.left);
-        int rightSubtree=height(root.right);
+        int leftSubtree=height(root.left);  //left subtree height 
+        int rightSubtree=height(root.right);//right subtree height
         
 
         return Math.max(leftSubtree, rightSubtree) + 1;
