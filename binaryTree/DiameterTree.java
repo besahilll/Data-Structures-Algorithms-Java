@@ -1,3 +1,4 @@
+import java.util.*;
 class DiameterTree{
     static class Node{
         int data;
@@ -26,13 +27,17 @@ class DiameterTree{
     static class TreeInfo{
         int ht;
         int diam;
-        Node(int ht,int diam){
+        TreeInfo(int ht,int diam){
             this.ht=ht;
             this.diam=diam;
         }
     }
 
     public static TreeInfo diameter2(Node root){
+
+        if(root==null){
+            return new TreeInfo(0, 0);
+        }
         TreeInfo left=diameter2(root.left);
         TreeInfo right=diameter2(root.right);
         int myHeight=Math.max(left.ht,right.ht) + 1;
@@ -43,13 +48,16 @@ class DiameterTree{
 
         int mydiam=Math.max(Math.max(diam1,diam2),diam3);
 
-        TreeInfo myInfo
+        TreeInfo myInfo=new TreeInfo(myHeight, mydiam);
+
+        return myInfo;
+
     }
     public static void main(String args[]){
         int[] nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree myTree=new BinaryTree();
         Node root=myTree.BuildTree(nodes);
-        System.out.println(diameter(root));
+        System.out.println(diameter2(root).diam);
     }
 
 }
