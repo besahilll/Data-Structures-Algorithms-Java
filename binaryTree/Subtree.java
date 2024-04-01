@@ -10,8 +10,8 @@ class Subtree{
             this.right=null;
         }
     }
+    static int idx=-1;
     static class BinaryTree{
-        static int idx=-1;
         public static Node BuildTree(int[] nodes){
             idx++;
             if(nodes[idx]==-1){
