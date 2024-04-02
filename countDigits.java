@@ -1,3 +1,4 @@
+//Find the number of digits of ‘n’ that evenly divide ‘n’.
 public class countDigits {
     public static int countDigits(int n){
         int count=0;;
