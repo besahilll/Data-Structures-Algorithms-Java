@@ -1,4 +1,4 @@
-//Java Recursion basic
+//Java Recursion basic-> changes made
 import java.util.*;
 public class Recurssionbasic {
     public static int[] printNos(int x) {
