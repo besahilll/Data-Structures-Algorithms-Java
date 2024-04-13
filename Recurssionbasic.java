@@ -1,3 +1,5 @@
+//Java Recursion basic
+import java.util.*;
 public class Recurssionbasic {
     public static int[] printNos(int x) {
         int[] ans=new int[x];
